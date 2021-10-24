@@ -20,6 +20,7 @@ jobs:
       - run:
           name: Run tests
           command: pytest tests/dummy.py
+      - run: echo echo ${MY_ENV_VAR_NAME}
   print_hello:
     docker: 
       - image: cimg/node:16.12.0
