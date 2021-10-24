@@ -20,15 +20,18 @@ jobs:
       - run:
           name: Run tests
           command: pytest tests/dummy.py
-      - run: echo echo ${MY_ENV_VAR_NAME}
+      - run: 
+          command: ${MY_ENV_VAR_NAME}
   print_hello:
+    environment:
+        param1: hello
     docker: 
       - image: cimg/node:16.12.0
     steps:
       - checkout
       - run:
           name: Print hello
-          command: node node_echo.js hello
+          command: node node_echo.js ${param1}
   print_world:
     docker: 
       - image: cimg/node:16.12.0
