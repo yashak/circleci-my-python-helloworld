@@ -41,8 +41,6 @@ jobs:
       - run:
           name: Print hello
           command: node node_echo.js ${param1}
-      - print_pipeline_id:
-          echo_suffix: "!!!"
   print_world:
     docker: 
       - image: cimg/node:16.12.0
@@ -73,6 +71,9 @@ jobs:
           keys:
             - my-cache-output.txt
       - run: cat output.txt
+      - print_pipeline_id:
+          echo_suffix: "!!!"
+          
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
