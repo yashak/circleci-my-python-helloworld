@@ -41,7 +41,7 @@ jobs:
       - run:
           name: Print hello
           command: node node_echo.js ${param1}
-      - print_pipeline_id
+      - print_pipeline_id:
           echo_suffix: "!!!"
   print_world:
     docker: 
