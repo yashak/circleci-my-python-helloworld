@@ -82,7 +82,7 @@ jobs:
     docker:
       - image: cimg/node:16.12.0
     steps:
-      - run: return 1
+      - run: exit 1
       - run: 
           command: echo "error occured"
           when: on_fail
