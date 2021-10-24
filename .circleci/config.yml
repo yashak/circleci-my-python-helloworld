@@ -35,7 +35,8 @@ jobs:
       - checkout
       - run:
           name: Print hello
-          command: node node_echo.js world
+          command: node node_echo.js world      
+      - run: echo "Pipeline.ID = << pipeline.id >> branch = << pipeline.git.branch >>"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
