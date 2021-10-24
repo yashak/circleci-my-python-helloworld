@@ -39,12 +39,12 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  welcome:
+  sample-workflow-for-nodejs:
     jobs: 
       - print_hello
       - print_world:
           requires: 
             - print_hello
-  sample: 
+  sample-workflow-for-python: 
     jobs:
       - build-and-test
