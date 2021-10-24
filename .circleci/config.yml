@@ -24,6 +24,7 @@ jobs:
     docker: 
       - image: cimg/node:16.12.0
     steps:
+      - checkout
       - run:
           name: Print hello
           command: node node_echo.js hello
@@ -31,6 +32,7 @@ jobs:
     docker: 
       - image: cimg/node:16.12.0
     steps:
+      - checkout
       - run:
           name: Print hello
           command: node node_echo.js world
